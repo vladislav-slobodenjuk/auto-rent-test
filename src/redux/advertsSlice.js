@@ -1,5 +1,5 @@
 import { createSlice } from '@reduxjs/toolkit';
-import { getAllCarsThunk } from './operations';
+import { getCarsThunk } from './operations';
 
 const initialState = {
   cars: [],
@@ -12,16 +12,16 @@ const advertsSlice = createSlice({
   initialState,
   extraReducers: (builder) =>
     builder
-      .addCase(getAllCarsThunk.fulfilled, (state, action) => {
-        state.cars = action.payload;
+      .addCase(getCarsThunk.fulfilled, (state, action) => {
+        state.cars = [...state.cars, ...action.payload];
         state.isLoading = false;
         state.error = null;
       })
-      .addCase(getAllCarsThunk.pending, (state) => {
+      .addCase(getCarsThunk.pending, (state) => {
         state.isLoading = true;
         state.error = null;
       })
-      .addCase(getAllCarsThunk.rejected, (state, action) => {
+      .addCase(getCarsThunk.rejected, (state, action) => {
         state.isLoading = false;
         state.error = action.payload;
       }),
