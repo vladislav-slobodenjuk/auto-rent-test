@@ -1,5 +1,5 @@
 import { createAsyncThunk } from '@reduxjs/toolkit';
-import { getAllCars } from '../api/api';
+import { getAllCars } from '../services/api';
 
 export const getAllCarsThunk = createAsyncThunk(
   'adverts/getAllCars',

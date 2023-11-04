@@ -1,5 +1,5 @@
 import {
-  HeaderContainer,
+  StyledHeader,
   Navigation,
   StyledLink,
   IconWrapper,
@@ -8,7 +8,7 @@ import sprite from '../../assets/sprite.svg';
 
 export const Header = () => {
   return (
-    <HeaderContainer>
+    <StyledHeader>
       <Navigation>
         <StyledLink to="/first">
           <IconWrapper>
@@ -23,6 +23,6 @@ export const Header = () => {
           Second
         </StyledLink>
       </Navigation>
-    </HeaderContainer>
+    </StyledHeader>
   );
 };

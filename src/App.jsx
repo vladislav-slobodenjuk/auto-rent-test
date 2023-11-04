@@ -4,11 +4,15 @@ import FirstPage from './pages/FirstPage/FirstPage';
 import SecondPage from './pages/SecondPage/SecondPage';
 import HalfPage from './pages/HalfPage/HalfPage';
 import ErrorPage from './pages/ErrorPage/ErrorPage';
-import { AppWrapper } from './App.styled';
+import { Container } from './App.styled';
+
+// const LazyHome = lazy(() => import('../../Pages/Home'));
+// const LazyMovies = lazy(() => import('../../Pages/Movies'));
+// const LazyMovieDetails = lazy(() => import('../../Pages/MovieDetails'));
 
 function App() {
   return (
-    <AppWrapper>
+    <Container>
       <Routes>
         <Route path="/" element={<SharedLayout />}>
           <Route path="/first" element={<FirstPage />} />
@@ -19,7 +23,7 @@ function App() {
           <Route path="*" element={<ErrorPage />} />
         </Route>
       </Routes>
-    </AppWrapper>
+    </Container>
   );
 }
 export default App;
