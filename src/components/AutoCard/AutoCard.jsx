@@ -1,34 +1,72 @@
-import { StyledAutoCard } from './AutoCard.styled';
+import { useState } from 'react';
+import Button from '../Button/Button';
+import Modal from '../Modal/Modal';
+import {
+  StyledAutoCard,
+  StyledCardBody,
+  StyledCardHeader,
+  StyledImage,
+  StyledImageOverlay,
+  StyledImgWrapper,
+  StyledPrice,
+  StyledPropItem,
+  StyledPropLIst,
+  StyledTitle,
+} from './AutoCard.styled';
 
 const AutoCard = ({ auto }) => {
   const {
     img,
     year,
     make,
+    model,
     type,
-    description,
-    fuelConsumption,
-    engineSize,
     accessories,
-    functionalities,
     rentalPrice,
     rentalCompany,
     address,
-    rentalConditions,
-    mileage,
     id,
   } = auto;
 
-  // console.log(auto);
+  const [isModalOpen, setIsModalOpen] = useState(false);
+
+  const toggleModal = () => setIsModalOpen(!isModalOpen);
+
+  const [_, city, country] = address.split(',');
+
+  const data = [city, country, rentalCompany, type, model, id, accessories[0]];
 
   return (
-    <StyledAutoCard>
-      <div className="imgWrapper">
-        <img src={img} alt={`${make} ${type}`} />
-        {/* <p>{`${auto.id} ${auto.make} ${auto.model}`}</p> */}
-      </div>
-      <div></div>
-    </StyledAutoCard>
+    <>
+      <StyledAutoCard>
+        <StyledImgWrapper>
+          <StyledImage src={img} alt={`${make} ${model}`} />
+          <StyledImageOverlay />
+        </StyledImgWrapper>
+        <StyledCardHeader>
+          <StyledTitle>
+            {make} <span>{model}</span>, {year}
+          </StyledTitle>
+          <StyledPrice>{rentalPrice}</StyledPrice>
+        </StyledCardHeader>
+        <StyledCardBody>
+          <StyledPropLIst>
+            {data.map((text, idx) => (
+              <StyledPropItem key={idx}>
+                {text}
+                <span>|</span>
+              </StyledPropItem>
+            ))}
+          </StyledPropLIst>
+        </StyledCardBody>
+        <Button wide text="Learn more" onClick={toggleModal} />
+      </StyledAutoCard>
+      {isModalOpen && (
+        <Modal closeModal={toggleModal}>
+          <div>sdfsadfsdf</div>
+        </Modal>
+      )}
+    </>
   );
 };
 
