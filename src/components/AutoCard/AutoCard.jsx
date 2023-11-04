@@ -59,7 +59,7 @@ const AutoCard = ({ auto }) => {
             ))}
           </StyledPropLIst>
         </StyledCardBody>
-        <Button wide text="Learn more" onClick={toggleModal} />
+        <Button $wide text="Learn more" onClick={toggleModal} />
       </StyledAutoCard>
       {isModalOpen && (
         <Modal closeModal={toggleModal}>

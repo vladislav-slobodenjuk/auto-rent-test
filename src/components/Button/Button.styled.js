@@ -3,7 +3,7 @@ import styled from 'styled-components';
 export const StyledButton = styled.button`
   justify-self: end;
   padding-block: 12px;
-  padding-inline: ${({ wide }) => (wide ? '99px' : '50px')};
+  padding-inline: ${({ $wide }) => ($wide ? '99px' : '50px')};
 
   font-family: Manrope;
   font-size: 14px;
