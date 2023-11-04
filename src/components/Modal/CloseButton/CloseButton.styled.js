@@ -21,6 +21,6 @@ export const StyledCloseButton = styled.button`
   &:hover {
     color: #3470ff;
     box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1);
-    transition: all 0.3s ease;
+    transition: all 0.3s ease-out;
   }
 `;

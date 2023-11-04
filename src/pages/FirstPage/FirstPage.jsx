@@ -1,6 +1,5 @@
 import { useEffect, useState } from 'react';
 import { Container, Title } from './FirstPage.styled';
-// import example from '../../assets/example.png';
 // import { MAKES } from '../../constants/makes';
 // import { getAllCars, getCarDyId } from '../../api/api';
 import { useDispatch, useSelector } from 'react-redux';
@@ -27,13 +26,16 @@ const FirstPage = () => {
       <Container>
         <Title>First Page</Title>
         <button onClick={toggleModal}>Test</button>
-        {/* <StyledImage src={example} alt="Example" /> */}
         {cars.length > 0 &&
           cars.map((car) => (
             <p key={car.id}>{`${car.id} ${car.make} ${car.model}`}</p>
           ))}
       </Container>
-      {isModalOpen && <Modal closeModal={toggleModal}></Modal>}
+      {isModalOpen && (
+        <Modal closeModal={toggleModal}>
+          <div>sdfsadfsdf</div>
+        </Modal>
+      )}
     </>
   );
 };

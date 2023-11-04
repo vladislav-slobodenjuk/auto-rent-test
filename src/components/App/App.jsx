@@ -1,10 +1,10 @@
-import { Route, Routes } from 'react-router-dom';
-import SharedLayout from './components/SharedLayout/SharedLayout';
-import FirstPage from './pages/FirstPage/FirstPage';
-import SecondPage from './pages/SecondPage/SecondPage';
-import HalfPage from './pages/HalfPage/HalfPage';
-import ErrorPage from './pages/ErrorPage/ErrorPage';
+import { Navigate, Route, Routes } from 'react-router-dom';
+
 import { Container } from './App.styled';
+import FirstPage from '../../pages/FirstPage/FirstPage';
+import SecondPage from '../../pages/SecondPage/SecondPage';
+import SharedLayout from '../SharedLayout/SharedLayout';
+import HalfPage from '../../pages/HalfPage/HalfPage';
 
 // const LazyHome = lazy(() => import('../../Pages/Home'));
 // const LazyMovies = lazy(() => import('../../Pages/Movies'));
@@ -20,7 +20,7 @@ function App() {
             <Route path=":half" element={<HalfPage />} />
           </Route>
 
-          <Route path="*" element={<ErrorPage />} />
+          <Route path="*" element={<Navigate to="/" replace />} />
         </Route>
       </Routes>
     </Container>
