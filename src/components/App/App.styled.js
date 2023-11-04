@@ -15,11 +15,14 @@ export const Container = styled.div`
 
   /* padding: 0 16px; */
   margin: 0 auto;
+  padding-inline: 32px;
+
   width: 320px;
 
   transition: all 0.5s;
 
   @media screen and (min-width: 768px) {
+    padding-inline: 64px;
     width: 768px;
   }
 

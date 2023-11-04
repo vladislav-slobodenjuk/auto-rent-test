@@ -3,14 +3,18 @@ import { Container, Title } from './FirstPage.styled';
 // import { MAKES } from '../../constants/makes';
 // import { getAllCars, getCarDyId } from '../../api/api';
 import { useDispatch, useSelector } from 'react-redux';
-import { getAllCarsThunk } from '../../redux/operations';
-import { selectCars } from '../../redux/selectors';
+
 import Modal from '../../components/Modal/Modal';
+import AutoGallery from '../../components/AutoGallery/AutoGallery';
+
+import { selectCars } from '../../redux/selectors';
+import { getAllCarsThunk } from '../../redux/operations';
 
 const FirstPage = () => {
+  const [isModalOpen, setIsModalOpen] = useState(false);
+
   const dispatch = useDispatch();
   const cars = useSelector(selectCars);
-  const [isModalOpen, setIsModalOpen] = useState(false);
 
   const toggleModal = () => setIsModalOpen(!isModalOpen);
 
@@ -26,10 +30,7 @@ const FirstPage = () => {
       <Container>
         <Title>First Page</Title>
         <button onClick={toggleModal}>Test</button>
-        {cars.length > 0 &&
-          cars.map((car) => (
-            <p key={car.id}>{`${car.id} ${car.make} ${car.model}`}</p>
-          ))}
+        <AutoGallery cars={cars} />
       </Container>
       {isModalOpen && (
         <Modal closeModal={toggleModal}>
