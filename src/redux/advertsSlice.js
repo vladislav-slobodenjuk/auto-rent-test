@@ -25,10 +25,12 @@ const advertsSlice = createSlice({
   extraReducers: (builder) =>
     builder
       .addCase(getCarsThunk.fulfilled, (state, { payload }) => {
-        state.cars = [...state.cars, ...payload];
-        if (payload.length < 12) {
-          state.isLastPage = true;
-        }
+        const { cars, page } = payload;
+
+        if (page === 1) state.cars = cars;
+        if (page > 1) state.cars = [...state.cars, ...cars];
+
+        if (cars.length < 12) state.isLastPage = true;
 
         state.isLoading = false;
         state.error = null;
