@@ -17,7 +17,6 @@ export const MAKES = [
   'Audi',
   'BMW',
   'Chevrolet',
-  'Mercedes-Benz',
   'Chrysler',
   'Kia',
   'Land',

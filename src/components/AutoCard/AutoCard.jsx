@@ -54,7 +54,7 @@ const AutoCard = ({ auto }) => {
     <>
       <StyledAutoCard>
         <StyledImgWrapper>
-          <StyledImage src={img} alt={`${make} ${model}`} />
+          <StyledImage src={img} alt={`${make} ${model}`} loading="lazy" />
           <StyledImageOverlay />
           <FavoriteButton $isSaved={isSaved} onClick={handleFavorite} />
         </StyledImgWrapper>

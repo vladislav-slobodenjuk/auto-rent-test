@@ -8,8 +8,3 @@ export const getCars = async ({ limit = 12, ...other }) => {
   const { data } = await $autoRent.get(``, { params: { limit, ...other } });
   return data;
 };
-
-// export const getCarDyId = async (id) => {
-//   const { data } = await $autoRent.get(``, { params: { id } });
-//   return data[0];
-// };
