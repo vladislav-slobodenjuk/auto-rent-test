@@ -1,13 +1,14 @@
 import { createAsyncThunk } from '@reduxjs/toolkit';
-import { getAllCars } from '../services/api';
+import { getCars } from '../services/api';
 
 export const getCarsThunk = createAsyncThunk(
-  'adverts/getAllCars',
+  'adverts/getCars',
   async (params, thunkApi) => {
     try {
-      const cars = await getAllCars(params);
+      const cars = await getCars(params);
       return cars;
     } catch (error) {
+      console.log(error);
       return thunkApi.rejectWithValue(error);
     }
   },

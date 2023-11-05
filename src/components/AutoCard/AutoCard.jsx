@@ -1,6 +1,7 @@
 import { useState } from 'react';
 import Button from '../Button/Button';
 import Modal from '../Modal/Modal';
+import FavoriteButton from './FavoriteButton/FavoriteButton';
 import {
   StyledAutoCard,
   StyledCardBody,
@@ -32,6 +33,7 @@ const AutoCard = ({ auto }) => {
 
   const toggleModal = () => setIsModalOpen(!isModalOpen);
 
+  // eslint-disable-next-line no-unused-vars
   const [_, city, country] = address.split(',');
 
   const data = [city, country, rentalCompany, type, model, id, accessories[0]];
@@ -42,6 +44,8 @@ const AutoCard = ({ auto }) => {
         <StyledImgWrapper>
           <StyledImage src={img} alt={`${make} ${model}`} />
           <StyledImageOverlay />
+          <FavoriteButton isSaved={''} />
+          {/* isSaved to do */}
         </StyledImgWrapper>
         <StyledCardHeader>
           <StyledTitle>
