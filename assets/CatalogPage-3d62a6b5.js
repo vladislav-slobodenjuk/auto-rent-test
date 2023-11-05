@@ -1,4 +1,4 @@
-import{R as be,u as Dr,c as Nr,s as x,j as u,a as Gt,r as f,b as Br,d as ve,e as Vr,f as Ur,g as kr,h as zr,i as Kt}from"./index-e8307b4a.js";function Wt(e=be){const t=e===be?Dr:Nr(e);return function(){const{store:n}=t();return n}}const Hr=Wt();function Gr(e=be){const t=e===be?Hr:Wt(e);return function(){return t().dispatch}}const Ge=Gr(),Kr=e=>e.cars,Wr=e=>e.favorites,Yr=e=>e.isLastPage,qr=e=>e.isLoading,Xr=x.section`
+import{R as be,u as Dr,c as Nr,s as x,j as u,a as Gt,r as f,b as Br,d as ve,e as Vr,f as Ur,g as kr,h as zr,i as Kt}from"./index-42b274f7.js";function Wt(e=be){const t=e===be?Dr:Nr(e);return function(){const{store:n}=t();return n}}const Hr=Wt();function Gr(e=be){const t=e===be?Hr:Wt(e);return function(){return t().dispatch}}const Ge=Gr(),Kr=e=>e.cars,Wr=e=>e.favorites,Yr=e=>e.isLastPage,qr=e=>e.isLoading,Xr=x.section`
   display: flex;
   flex-direction: column;
   padding-bottom: 150px;
