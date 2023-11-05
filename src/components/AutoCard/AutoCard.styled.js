@@ -4,6 +4,12 @@ export const StyledAutoCard = styled.div`
   display: flex;
   flex-direction: column;
   height: 100%;
+  transition: all 0.3s ease-out;
+
+  &:hover {
+    transform: scale(1.02);
+    transition: all 0.3s ease-out;
+  }
 `;
 
 export const StyledImage = styled.img`

@@ -9,7 +9,7 @@ export const getCars = async ({ page = 1, limit = 12 }) => {
   return data;
 };
 
-export const getCarDyId = async (id) => {
-  const { data } = await $autoRent.get(``, { params: { id } });
-  return data[0];
-};
+// export const getCarDyId = async (id) => {
+//   const { data } = await $autoRent.get(``, { params: { id } });
+//   return data[0];
+// };

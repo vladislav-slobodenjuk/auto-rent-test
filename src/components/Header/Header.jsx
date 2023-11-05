@@ -10,17 +10,23 @@ export const Header = () => {
   return (
     <StyledHeader>
       <Navigation>
+        <StyledLink to="/">
+          <IconWrapper>
+            <use href={`${sprite}#icon-logo`} />
+          </IconWrapper>
+          Main
+        </StyledLink>
         <StyledLink to="/catalog">
           <IconWrapper>
             <use href={`${sprite}#icon-logo`} />
           </IconWrapper>
-          First
+          Catalog
         </StyledLink>
         <StyledLink to="/favorites">
           <IconWrapper>
             <use href={`${sprite}#icon-logo`} />
           </IconWrapper>
-          Second
+          Favorites
         </StyledLink>
       </Navigation>
     </StyledHeader>

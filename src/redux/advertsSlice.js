@@ -3,6 +3,7 @@ import { getCarsThunk } from './operations';
 
 const initialState = {
   cars: [],
+  favorites: [],
   isLastPage: false,
   isLoading: false,
   error: null,
@@ -11,6 +12,16 @@ const initialState = {
 const advertsSlice = createSlice({
   name: 'adverts',
   initialState,
+  reducers: {
+    addFavorite(state, { payload }) {
+      state.favorites.push(payload);
+    },
+    deleteFavorite(state, { payload }) {
+      state.favorites = state.favorites.filter(
+        (auto) => auto.id !== payload.id,
+      );
+    },
+  },
   extraReducers: (builder) =>
     builder
       .addCase(getCarsThunk.fulfilled, (state, { payload }) => {
@@ -31,5 +42,7 @@ const advertsSlice = createSlice({
         state.error = action.payload;
       }),
 });
+
+export const { addFavorite, deleteFavorite } = advertsSlice.actions;
 
 export const advertsReducer = advertsSlice.reducer;

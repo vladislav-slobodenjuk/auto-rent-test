@@ -26,14 +26,14 @@ const CatalogPage = () => {
     dispatch(getCarsThunk({ page }));
   }, [page, dispatch]);
 
+  const showLoadMore = !isLastPage && !isLoading && cars.length > 0;
+
   return (
     <>
       <StyledSection>
         <SectionTitle $hidden>Catalog Page</SectionTitle>
         <AutoGallery cars={cars} />
-        {!isLastPage && !isLoading && (
-          <LoadMoreButton onClick={() => setPage(page + 1)} />
-        )}
+        {showLoadMore && <LoadMoreButton onClick={() => setPage(page + 1)} />}
       </StyledSection>
     </>
   );
