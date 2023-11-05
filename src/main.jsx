@@ -10,7 +10,7 @@ import '@csstools/normalize.css';
 import './index.css';
 
 ReactDOM.createRoot(document.getElementById('root')).render(
-  <BrowserRouter basename="/auto-rent-test">
+  <BrowserRouter basename="/auto-rent-test/">
     <Provider store={store}>
       <PersistGate loading={null} persistor={persistor}>
         <App />

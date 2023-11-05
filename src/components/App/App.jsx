@@ -4,7 +4,7 @@ import { lazy } from 'react';
 import { Container } from './App.styled';
 import SharedLayout from '../SharedLayout/SharedLayout';
 
-// const LazyHome = lazy(() => import('../../Pages/Home'));
+const LazyHomePage = lazy(() => import('../../pages/HomePage/HomePage'));
 const LazyCatalogPage = lazy(() =>
   import('../../pages/CatalogPage/CatalogPage'),
 );
@@ -17,6 +17,7 @@ function App() {
     <Container>
       <Routes>
         <Route path="/" element={<SharedLayout />}>
+          <Route index element={<LazyHomePage />} />
           <Route path="/catalog" element={<LazyCatalogPage />} />
           <Route path="/favorites" element={<LazyFavoritesPage />} />
 
