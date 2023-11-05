@@ -3,6 +3,7 @@ import { getCarsThunk } from './operations';
 
 const initialState = {
   cars: [],
+  isLastPage: false,
   isLoading: false,
   error: null,
 };
@@ -12,8 +13,12 @@ const advertsSlice = createSlice({
   initialState,
   extraReducers: (builder) =>
     builder
-      .addCase(getCarsThunk.fulfilled, (state, action) => {
-        state.cars = [...state.cars, ...action.payload];
+      .addCase(getCarsThunk.fulfilled, (state, { payload }) => {
+        state.cars = [...state.cars, ...payload];
+        if (payload.length < 12) {
+          state.isLastPage = true;
+        }
+
         state.isLoading = false;
         state.error = null;
       })
