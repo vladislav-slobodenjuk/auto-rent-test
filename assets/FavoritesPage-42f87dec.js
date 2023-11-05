@@ -1,11 +1,11 @@
-import{s as t,L as o,j as f}from"./index-0371fbbc.js";const a=t.div`
+import{s as f,L as o,j as t}from"./index-1f0febfb.js";const a=f.div`
   display: flex;
   justify-content: center;
   align-items: center;
   padding-top: 500px;
-`,e=t.div`
+`,e=f.div`
   text-align: center;
-`,s=t.h1`
+`,x=f.h1`
   color: #ffffff;
   text-shadow:
     0 0 5px #00baff,
@@ -13,7 +13,7 @@ import{s as t,L as o,j as f}from"./index-0371fbbc.js";const a=t.div`
     0 0 20px #00baff,
     0 0 40px #00baff,
     0 0 80px #00baff;
-`,x=t(o)`
+`;f(o)`
   padding: 8px 16px;
   color: #ffffff; /* White text color */
   text-shadow:
@@ -36,4 +36,4 @@ import{s as t,L as o,j as f}from"./index-0371fbbc.js";const a=t.div`
       0 0 40px #00baff,
       0 0 80px #00baff;
   }
-`,p=()=>f.jsx(a,{children:f.jsxs(e,{children:[f.jsx(s,{children:"Second Page"}),f.jsx(x,{to:"/second/5",children:"Half"})]})});export{p as default};
+`;const p=()=>t.jsx(a,{children:t.jsx(e,{children:t.jsx(x,{children:"Second Page"})})});export{p as default};
