@@ -1,13 +1,15 @@
-import { Container, Block, Title } from './FavoritesPage.styled';
+import { useSelector } from 'react-redux';
+import AutoGallery from '../../components/AutoGallery/AutoGallery';
+import { SectionTitle, StyledSection } from '../CatalogPage/CatalogPage.styled';
+import { selectFavorites } from '../../redux/selectors';
 
 const FavoritesPage = () => {
+  const favorites = useSelector(selectFavorites);
   return (
-    <Container>
-      <Block>
-        <Title>Second Page</Title>
-        {/* <StyledLink to="/second/5">Half</StyledLink> */}
-      </Block>
-    </Container>
+    <StyledSection>
+      <SectionTitle $hidden>Favorites Gallery</SectionTitle>
+      <AutoGallery cars={favorites} />
+    </StyledSection>
   );
 };
 

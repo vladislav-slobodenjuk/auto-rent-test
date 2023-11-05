@@ -27,10 +27,10 @@ const CatalogPage = () => {
 
   return (
     <>
-      <SectionTitle $hidden>Catalog Page</SectionTitle>
       <Toolbar page={page} />
       <StyledSection>
-        {cars.length == 0 && (
+        <SectionTitle $hidden>Auto Gallery</SectionTitle>
+        {cars.length == 0 && !isLoading && (
           <p style={{ alignSelf: 'center' }}>Nothing found</p>
         )}
         <AutoGallery cars={cars} />

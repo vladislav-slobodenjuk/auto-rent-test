@@ -10,6 +10,7 @@ import { MAKES } from '../../constants/makes';
 import { useDispatch } from 'react-redux';
 import { getCarsThunk } from '../../redux/operations';
 import { createArrayRange } from '../../utils/utils';
+import { SectionTitle } from '../../pages/CatalogPage/CatalogPage.styled';
 
 const Toolbar = ({ page }) => {
   const dispatch = useDispatch();
@@ -28,6 +29,7 @@ const Toolbar = ({ page }) => {
 
   return (
     <StyledToolbar>
+      <SectionTitle $hidden>Search Tools</SectionTitle>
       <Formik initialValues={initialValues} onSubmit={Submit}>
         {({ isSubmitting }) => (
           <StyledForm>
