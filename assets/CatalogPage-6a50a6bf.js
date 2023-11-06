@@ -1,4 +1,4 @@
-import{s as K,j as v,g as Mt,r as l,c as Rt,u as Ie,a as Pt}from"./index-386aaa0b.js";import{S as zr,B as Lt,u as Dt,s as Nt,a as Vt,b as Bt,c as Ut,A as Gt}from"./AutoGallery-a27155e5.js";const zt=K.button`
+import{s as K,j as v,g as Mt,r as l,c as Rt,u as Ie,a as Pt}from"./index-638a39b4.js";import{S as zr,B as Lt,u as Dt,s as Nt,a as Vt,b as Bt,c as Ut,A as Gt}from"./AutoGallery-c7fd7543.js";const zt=K.button`
   align-self: center;
 
   font-family: Manrope;
