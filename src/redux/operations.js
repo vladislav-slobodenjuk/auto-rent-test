@@ -8,7 +8,6 @@ export const getCarsThunk = createAsyncThunk(
     const { page, mileageFrom, mileageTo, price } = params;
     try {
       const result = await getCars(params);
-      console.log(params);
 
       let cars = result;
 

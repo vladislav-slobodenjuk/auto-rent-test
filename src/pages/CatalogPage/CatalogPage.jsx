@@ -11,6 +11,7 @@ import { SectionTitle, StyledSection } from './CatalogPage.styled';
 import AutoGallery from '../../components/AutoGallery/AutoGallery';
 import LoadMoreButton from '../../components/LoadMoreButton/LoadMoreButton';
 import Toolbar from '../../components/ToolBar/Toolbar';
+import { Loader } from '../../components/Loader/Loader';
 
 const CatalogPage = () => {
   const dispatch = useDispatch();
@@ -38,6 +39,7 @@ const CatalogPage = () => {
         )}
         <AutoGallery cars={cars} />
         {showLoadMore && <LoadMoreButton onClick={decrementPage} />}
+        {isLoading && <Loader />}
       </StyledSection>
     </>
   );
