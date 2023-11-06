@@ -20,3 +20,9 @@ export const filterByMileage = (cars, start = 0, end = 0) => {
     return cars.filter((auto) => auto.mileage >= start && auto.mileage <= end);
   }
 };
+
+export const parseAddress = (address) => {
+  // eslint-disable-next-line no-unused-vars
+  const [_, city, country] = address.split(', ');
+  return { city, country };
+};

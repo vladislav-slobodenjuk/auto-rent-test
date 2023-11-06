@@ -3,7 +3,7 @@ import styled from 'styled-components';
 export const StyledSection = styled.section`
   display: flex;
   flex-direction: column;
-  padding-bottom: 150px;
+  padding-bottom: 50px;
 `;
 
 export const SectionTitle = styled.h2`

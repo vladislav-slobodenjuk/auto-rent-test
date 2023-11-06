@@ -19,6 +19,7 @@ import {
   StyledTitle,
 } from './AutoCard.styled';
 import ModalCard from '../ModalCard/ModalCard';
+import { parseAddress } from '../../utils/utils';
 
 const AutoCard = ({ auto }) => {
   const {
@@ -46,9 +47,7 @@ const AutoCard = ({ auto }) => {
     if (isSaved) dispatch(deleteFavorite(auto));
   };
 
-  // eslint-disable-next-line no-unused-vars
-  const [_, city, country] = address.split(', ');
-
+  const { city, country } = parseAddress(address);
   const data = [city, country, rentalCompany, type, model, id, accessories[0]];
 
   return (

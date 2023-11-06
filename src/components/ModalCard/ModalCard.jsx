@@ -1,3 +1,4 @@
+import { parseAddress } from '../../utils/utils';
 import { StyledPropItem } from '../AutoCard/AutoCard.styled';
 import Button from '../Button/Button';
 import {
@@ -33,8 +34,7 @@ const ModalCard = ({ auto }) => {
   } = auto;
 
   const parsedConditions = rentalConditions.split('\n');
-
-  const [_, city, country] = address.split(', ');
+  const { city, country } = parseAddress(address);
 
   const firstRowData = [
     city,

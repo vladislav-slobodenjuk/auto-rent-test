@@ -20,7 +20,6 @@ const advertsPersistConfig = {
 };
 
 export const store = configureStore({
-  // reducer: advertsReducer,
   reducer: persistReducer(advertsPersistConfig, advertsReducer),
   middleware: (getDefaultMiddleware) =>
     getDefaultMiddleware({
