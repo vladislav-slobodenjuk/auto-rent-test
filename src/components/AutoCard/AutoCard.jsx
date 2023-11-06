@@ -18,6 +18,7 @@ import {
   StyledPropLIst,
   StyledTitle,
 } from './AutoCard.styled';
+import ModalCard from '../ModalCard/ModalCard';
 
 const AutoCard = ({ auto }) => {
   const {
@@ -78,7 +79,7 @@ const AutoCard = ({ auto }) => {
       </StyledAutoCard>
       {isModalOpen && (
         <Modal closeModal={toggleModal}>
-          <div>sdfsadfsdf</div>
+          <ModalCard auto={auto} />
         </Modal>
       )}
     </>
