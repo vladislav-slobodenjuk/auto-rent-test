@@ -33,7 +33,55 @@ export const ToolWrapper = styled.div`
   &:not(:last-child) {
     margin-right: 18px;
   }
+
+  & p {
+    margin-bottom: 8px;
+  }
 `;
+
+export const MileageWrapper = styled.div`
+  & :first-child {
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 0;
+    border-right: 1px solid rgba(138, 138, 137, 0.2);
+  }
+  & :last-child {
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 0;
+  }
+`;
+
+export const makeSelectStyles = {
+  width: '224px',
+  paddingBlock: '14px',
+  paddingRight: '68px',
+  paddingLeft: '18px',
+  fontFamily: 'Manrope',
+  fontSize: '18px',
+  fontWeight: '500',
+  lineHeight: 'calc(20 / 18)',
+  color: '#121417',
+  backgroundColor: '#f7f7fb',
+  borderRadius: ' 14px',
+  border: 'none',
+  outline: 'none',
+};
+
+export const PriceSelectStyles = {
+  width: '125px',
+  paddingBlock: '14px',
+  paddingRight: '18px',
+  paddingLeft: '18px',
+  fontFamily: 'Manrope',
+  fontSize: '18px',
+  fontWeight: '500',
+  lineHeight: 'calc(20 / 18)',
+  color: '#121417',
+  backgroundColor: '#f7f7fb',
+  borderRadius: ' 14px',
+  border: 'none',
+  outline: 'none',
+};
 
 export const StyledSelect = styled(Field)`
   padding-block: 14px;
@@ -60,6 +108,7 @@ export const StyledInput = styled(Field)`
   padding-block: 14px;
   padding-right: 41px;
   padding-left: 24px;
+  width: 160px;
 
   font-family: Manrope;
   font-size: 18px;
@@ -74,5 +123,9 @@ export const StyledInput = styled(Field)`
 
   & .placeholder {
     display: none;
+  }
+
+  & ::placeholder {
+    color: #121417;
   }
 `;
