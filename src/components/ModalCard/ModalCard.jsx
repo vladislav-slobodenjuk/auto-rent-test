@@ -14,7 +14,6 @@ import {
 } from './ModalCard.styled';
 
 const ModalCard = ({ auto }) => {
-  console.log(auto);
   const {
     img,
     year,

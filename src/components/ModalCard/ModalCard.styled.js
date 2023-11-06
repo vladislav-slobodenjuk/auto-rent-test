@@ -1,9 +1,7 @@
 import styled from 'styled-components';
 import { StyledPropLIst, StyledTitle } from '../AutoCard/AutoCard.styled';
 
-export const StyledModalCard = styled.div`
-  /* padding: 10px; */
-`;
+export const StyledModalCard = styled.div``;
 export const StyledImgWrapper = styled.div`
   margin-bottom: 14px;
   width: 460px;
