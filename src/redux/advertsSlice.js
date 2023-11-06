@@ -37,6 +37,7 @@ const advertsSlice = createSlice({
       })
       .addCase(getCarsThunk.pending, (state) => {
         state.isLoading = true;
+        state.isLastPage = false;
         state.error = null;
       })
       .addCase(getCarsThunk.rejected, (state, action) => {

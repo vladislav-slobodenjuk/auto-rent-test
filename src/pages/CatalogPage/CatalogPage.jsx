@@ -17,24 +17,27 @@ const CatalogPage = () => {
   const cars = useSelector(selectCars);
   const isLastPage = useSelector(selectIsLastPage);
   const isLoading = useSelector(selectIsLoading);
-  const [page, setPage] = useState(1);
+  const [params, setParams] = useState({ page: 1 });
 
   useEffect(() => {
-    dispatch(getCarsThunk({ page }));
-  }, [page, dispatch]);
+    dispatch(getCarsThunk({ ...params }));
+  }, [params, dispatch]);
+
+  const decrementPage = () => setParams({ ...params, page: params.page + 1 });
 
   const showLoadMore = !isLastPage && !isLoading && cars.length > 0;
+  const showEmptyResult = cars.length == 0 && !isLoading;
 
   return (
     <>
-      <Toolbar page={page} />
+      <Toolbar params={params} setParams={setParams} />
       <StyledSection>
         <SectionTitle $hidden>Auto Gallery</SectionTitle>
-        {cars.length == 0 && !isLoading && (
+        {showEmptyResult && (
           <p style={{ alignSelf: 'center' }}>Nothing found</p>
         )}
         <AutoGallery cars={cars} />
-        {showLoadMore && <LoadMoreButton onClick={() => setPage(page + 1)} />}
+        {showLoadMore && <LoadMoreButton onClick={decrementPage} />}
       </StyledSection>
     </>
   );
