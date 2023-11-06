@@ -1,4 +1,4 @@
-import{s as K,j as y,g as Mt,r as l,c as Rt,u as Ie,a as Pt,L as Lt}from"./index-974fc584.js";import{B as Dt,u as Nt,s as Vt,a as Bt,b as Ut,A as Gt}from"./AutoGallery-fffd0f24.js";import{a as zr,S as zt}from"./CatalogPage.styled-4a823bf7.js";const Ht=K.button`
+import{s as K,j as y,g as Mt,r as l,c as Rt,u as Ie,a as Pt,L as Lt}from"./index-0773544d.js";import{B as Dt,u as Nt,s as Vt,a as Bt,b as Ut,A as Gt}from"./AutoGallery-b05a3345.js";import{a as zr,S as zt}from"./CatalogPage.styled-2f1ee687.js";const Ht=K.button`
   align-self: center;
 
   font-family: Manrope;

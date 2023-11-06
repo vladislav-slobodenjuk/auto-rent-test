@@ -1,4 +1,4 @@
-import{R as f,b as T,d as H,s,j as e,r as R,e as W,p as z,u as q,f as G,h as K}from"./index-974fc584.js";function B(t=f){const o=t===f?T:H(t);return function(){const{store:n}=o();return n}}const U=B();function Y(t=f){const o=t===f?U:B(t);return function(){return o().dispatch}}const J=Y(),ye=t=>t.cars,N=t=>t.favorites,be=t=>t.isLastPage,ve=t=>t.isLoading,Q=s.ul`
+import{R as f,b as T,d as H,s,j as e,r as R,e as W,p as z,u as q,f as G,h as K}from"./index-0773544d.js";function B(t=f){const o=t===f?T:H(t);return function(){const{store:n}=o();return n}}const U=B();function Y(t=f){const o=t===f?U:B(t);return function(){return o().dispatch}}const J=Y(),ye=t=>t.cars,N=t=>t.favorites,be=t=>t.isLastPage,ve=t=>t.isLoading,Q=s.ul`
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(274px, 1fr));
 
