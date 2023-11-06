@@ -1,0 +1,1 @@
+import{u as t,j as e}from"./index-974fc584.js";import{c as r,A as o}from"./AutoGallery-fffd0f24.js";import{S as a,a as i}from"./CatalogPage.styled-4a823bf7.js";const m=()=>{const s=t(r);return e.jsxs(a,{children:[e.jsx(i,{$hidden:!0,children:"Favorites Gallery"}),e.jsx(o,{cars:s})]})};export{m as default};
