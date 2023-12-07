@@ -18,3 +18,6 @@
 - Finally user can rent auto by clicking "Rental car" link at Modal.
 - At Favorites page user can take another look at liked autos, delete
   unnecessary and choose the most suitable.
+
+
+used typescript
