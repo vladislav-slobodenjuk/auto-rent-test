@@ -11,6 +11,8 @@
   other time won't loose them.
 - User also can see detailed information about auto by clicking on "Learn more"
   button.
+
+  -used typescript
 - At modal window user can see full information including accessories,
   functionalities and rental conditions.
 - Finally user can rent auto by clicking "Rental car" link at Modal.
